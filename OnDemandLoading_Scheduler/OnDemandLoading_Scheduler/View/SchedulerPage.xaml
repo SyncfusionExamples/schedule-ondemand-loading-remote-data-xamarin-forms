@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms"
+             xmlns:local="clr-namespace:OnDemandLoading_Scheduler"
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+             x:Class="OnDemandLoading_Scheduler.SchedulerPage">
+    <ContentPage.Content> 
+        <Grid> 
+            <syncfusion:SfSchedule x:Name="schedule" 
+                               ScheduleView = "MonthView"  
+                               DataSource = "{Binding Appointments}">
+
+                <syncfusion:SfSchedule.AppointmentMapping>
+                    <syncfusion:ScheduleAppointmentMapping 
+                         SubjectMapping="Subject"
+                         StartTimeMapping="StartTime"
+                         EndTimeMapping="EndTime"
+                         IsAllDayMapping="AllDay"
+                         ColorMapping="Color"
+                         RecurrenceRuleMapping="RecurrenceRule"/>
+                </syncfusion:SfSchedule.AppointmentMapping>
+
+                <syncfusion:SfSchedule.MonthViewSettings>
+                    <syncfusion:MonthViewSettings AppointmentDisplayMode="Appointment" />
+                </syncfusion:SfSchedule.MonthViewSettings>
+
+                <syncfusion:SfSchedule.BindingContext>
+                    <local:SchedulerViewModel />
+                </syncfusion:SfSchedule.BindingContext>
+            </syncfusion:SfSchedule>
+            
+            <busyindicator:SfBusyIndicator x:Name="busyindicator" Duration="3" ViewBoxHeight="100"
+                                           ViewBoxWidth="100"
+                                           AnimationType="SingleCircle" TextColor="Red" 
+                                           IsBusy="True"/> 
+        </Grid> 
+    </ContentPage.Content> 
+    <ContentPage.Behaviors>
+        <local:SchedulerPageBehavior/>
+    </ContentPage.Behaviors> 
+</ContentPage>
