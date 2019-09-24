@@ -89,6 +89,9 @@ In Xamarin, HttpClient provides a base class to send HTTP requests and receive H
         }
     }
 
+### Note
+Confirm your internet connection is enabled to fetch appointment data web services
+
 ## Binding remote data in Scheduler
 The Schedule Appointment is an MVVM-friendly feature with complete data-binding support. This allows you to bind the data fetched from the web API service in order to load and manage appointments in the Scheduler control. Create a view model SchedulerViewModel with asynchronous method GetData to invoke the service call and store the received data in the proper collection.
 
