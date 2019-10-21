@@ -305,8 +305,7 @@ On view swiping, you can update the filtered appointments in visible dates range
 Now, scheduler control is configured with an application to load appointments on-demand via web API service. Just running the sample with the previous steps will render a scheduler with appointments.
 
 ## Conclusion
-In this blog post, we’ve discussed about loading appointments on-demand via web services in Xamarin Forms scheduler. You can also check out our project samples in this GitHub repository. Feel free to try out this sample and share your feedback or questions in the comments section. You can also contact us through our support forum, Direct-Trac, or feedback portal. We are happy to assist you.
-
+In this blog post, we’ve discussed about loading appointments on-demand via web services in Xamarin Forms scheduler. You can also check out our project samples in this GitHub repository. Feel free to try out this sample and share your feedback or questions in the comments section. You can also contact us through our [support forum](https://www.syncfusion.com/forums), [Direct-Trac](https://www.syncfusion.com/support/directtrac/), or [feedback portal](https://www.syncfusion.com/feedback/). We are happy to assist you.
 
 ## References
 https://www.syncfusion.com/blogs/post/consume-asp-net-core-web-api-in-xamarin.aspx
